@@ -1,0 +1,13 @@
+<div contenteditable
+     {{on "mouseup" this.emitSelection}}
+     {{on "paste" this.emitClipboardEvent}}
+     {{on "copy" this.emitClipboardEvent}}
+     {{on "cut" this.emitClipboardEvent}}
+     {{on "undo" this.emitUndoEvent}}
+     {{on "undo" this.emitRedoEvent}}
+     {{on "keydown" this.emitKeyEvent}}
+     {{on "keyup" this.emitKeyEvent}}
+     {{on "compositionend" this.emitKeyEvent}}
+     {{did-insert this.setRootNode}}>
+  {{yield}}
+</div>

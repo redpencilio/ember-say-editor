@@ -1,0 +1,1 @@
+export { default } from 'ember-say-editor/components/say-editor';
